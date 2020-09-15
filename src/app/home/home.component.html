@@ -1,0 +1,56 @@
+<form [formGroup]="home">
+
+    <div class="p-grid">
+
+        <div class="p-col-12">
+    <label>Nome</label>
+    <input formControlName="nome" id="nome" type="text" pInputText> 
+</div>
+  
+<div class="p-col-12">
+     <label>Data de Nascimento</label>
+    <p-calendar  formControlName="data" inputId="data"></p-calendar>
+        </div>
+
+        <div class="p-col-12">
+    <label>E-mail</label>
+    <input formControlName="email" id="email" type="text" pInputText> 
+</div>
+
+<div class="p-col-12">
+    <label>Assunto</label>
+    <input formControlName="assunto" id="assunto" type="text" pInputText> 
+</div>
+
+<div class="p-col-12">
+    <label>Informar Endereço</label>
+    <p-checkbox formControlName="ativarEndereco" binary="true" inputId="binary"></p-checkbox>
+   </div>
+
+   <div class="p-col-12">
+    <label>CEP</label>
+    <input formControlName="cep" id="cep" type="text" pInputText> 
+    </div>
+
+    <div class="p-col-12">
+    <label>Cidade</label>
+    <input formControlName="cidade" id="cidade" type="text" pInputText> 
+</div>
+
+<div class="p-col-12">
+    <label>Bairro</label>
+    <input formControlName="bairro" id="bairro" type="text" pInputText> 
+</div>
+
+<div class="p-col-12">
+    <label>Endereço</label>
+    <input formControlName="endereco" id="endereco" type="text" pInputText>  
+
+
+    <button pButton type="button" label="Click" ></button>
+
+
+</div>
+</form>
+
+
