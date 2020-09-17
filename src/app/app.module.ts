@@ -5,12 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {AccordionModule} from 'primeng/accordion';   
-//import {MenuItem} from 'primeng/api';  
+import {AccordionModule} from 'primeng/accordion';
+// import {MenuItem} from 'primeng/api';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {CalendarModule} from 'primeng/calendar';
 import {CheckboxModule} from 'primeng/checkbox';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputMaskModule} from 'primeng/inputmask';
+import {CardModule} from 'primeng/card';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -23,10 +26,13 @@ import { HomeComponent } from './home/home.component';
      CalendarModule,
      ButtonModule,
      CheckboxModule,
+     DropdownModule,
+     InputMaskModule,
+     CardModule,
      ReactiveFormsModule,
     AccordionModule,
     BrowserAnimationsModule,
-     //MenuItem,
+     // MenuItem,
     BrowserModule,
     AppRoutingModule
   ],

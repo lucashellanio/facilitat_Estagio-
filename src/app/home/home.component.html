@@ -1,56 +1,60 @@
-<form [formGroup]="home">
+<p-card>
+    <form [formGroup]="home">
 
-    <div class="p-grid">
+        <div class="p-grid">
 
-        <div class="p-col-12">
-    <label>Nome</label>
-    <input formControlName="nome" id="nome" type="text" pInputText> 
-</div>
-  
-<div class="p-col-12">
-     <label>Data de Nascimento</label>
-    <p-calendar  formControlName="data" inputId="data"></p-calendar>
+            <div class="p-col-12">
+                <label>Nome</label>
+                <input formControlName="name" id="name" type="text" pInputText>
+                <small *ngIf="home.controls.name.hasError('name')"  id="name-help" class="p-invalid">E-mail inválido.</small>
+            </div>
+
+            <div class="p-col-12">
+                <label>Data de Nascimento</label>
+                <p-calendar dateFormat="dd/mm/yy" [minDate]="minDate" formControlName="date" inputId="data">
+                </p-calendar>
+            </div>
+
+            <div class="p-col-12">
+                <label>E-mail</label>
+                <input formControlName="email" id="email" type="text" pInputText>
+                <small *ngIf="home.controls.email.hasError('email')"  id="email-help" class="p-invalid">E-mail inválido.</small>
+            </div>
+
+            <div class="p-col-12">
+
+                <label>Assunto</label>
+                <p-dropdown formControlName="topic" placeholder="Escolha o Assunto" optionLabel="name"></p-dropdown>
+            </div>
+
+            <div class="p-col-12">
+                <label>Informar Endereço</label>
+                <p-checkbox formControlName="informAddress" (onChange)= "activateAddress(home.controls.informAddress.value)" binary="true" inputId="binary"></p-checkbox>
+            </div>
+
+            <div class="p-col-12">
+                <label>CEP</label>
+                <p-inputMask formControlName="cep" disabled="true" mask="99999-999"></p-inputMask>
+            </div>
+
+            <div class="p-col-12">
+                <label>Cidade</label>
+                <input formControlName="city" disabled="true" id="cidade" type="text" pInputText>
+            </div>
+
+            <div class="p-col-12">
+                <label>Bairro</label>
+                <input formControlName="district" disabled="true" id="bairro" type="text" pInputText>
+            </div>
+
+            <div class="p-col-12">
+                <label>Endereço</label>
+                <input formControlName="address" disabled="true" id="endereco" type="text" pInputText>
+            </div>
+
+            <button pButton type="button" label="Confirmar"></button>
+
+
         </div>
-
-        <div class="p-col-12">
-    <label>E-mail</label>
-    <input formControlName="email" id="email" type="text" pInputText> 
-</div>
-
-<div class="p-col-12">
-    <label>Assunto</label>
-    <input formControlName="assunto" id="assunto" type="text" pInputText> 
-</div>
-
-<div class="p-col-12">
-    <label>Informar Endereço</label>
-    <p-checkbox formControlName="ativarEndereco" binary="true" inputId="binary"></p-checkbox>
-   </div>
-
-   <div class="p-col-12">
-    <label>CEP</label>
-    <input formControlName="cep" id="cep" type="text" pInputText> 
-    </div>
-
-    <div class="p-col-12">
-    <label>Cidade</label>
-    <input formControlName="cidade" id="cidade" type="text" pInputText> 
-</div>
-
-<div class="p-col-12">
-    <label>Bairro</label>
-    <input formControlName="bairro" id="bairro" type="text" pInputText> 
-</div>
-
-<div class="p-col-12">
-    <label>Endereço</label>
-    <input formControlName="endereco" id="endereco" type="text" pInputText>  
-
-
-    <button pButton type="button" label="Click" ></button>
-
-
-</div>
-</form>
-
-
+    </form>
+</p-card>
